@@ -12,7 +12,7 @@ function PlantCard({ plant, handleDelete }) {
     fetch(`http://localhost:6001/plants/${id}`, {
       method:"DELETE"
     })
-    handleDelete(id)
+    .then(handleDelete(id))
   }
 
 return (
