@@ -3,14 +3,15 @@ import PlantCard from "./PlantCard";
 
 function PlantList({ plants }) {
 
-  const plantDetails = plants.map(plant => (
-    <PlantCard 
-    key={plant.id}
-    plant={plant}
-    />
-  ))
+ 
   return (
-    <ul className="cards">{plantDetails}</ul>
+    <ul className="cards"> {plants.map(plant => (
+      <PlantCard 
+      key={plant.id}
+      plant={plant}
+      />
+      ))
+    } </ul>
   );
 }
 
