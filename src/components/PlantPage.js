@@ -19,6 +19,8 @@ function PlantPage() {
     setPlants(updatedPlants)
   }
 
+
+
   return (
     <main>
       <NewPlantForm 

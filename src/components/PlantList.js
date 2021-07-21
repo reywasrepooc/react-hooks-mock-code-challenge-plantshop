@@ -1,7 +1,7 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList({ plants }) {
+function PlantList({ plants, handleInStockClick, isInStock}) {
 
  
   return (
@@ -9,6 +9,8 @@ function PlantList({ plants }) {
       <PlantCard 
       key={plant.id}
       plant={plant}
+      handleInStockClick={handleInStockClick}
+      isInStock={isInStock}
       />
       ))
     } </ul>
