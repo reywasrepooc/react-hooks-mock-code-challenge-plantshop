@@ -24,7 +24,10 @@ function PlantPage() {
     return plant.name.toLowerCase().includes(search.toLowerCase())
   })
 
-
+  const handleDeletePlant = (id) => {
+    const updatedPlants = plants.filter(plant => plant.id !== id)
+    setPlants(updatedPlants)
+  }
 
   return (
     <main>
@@ -37,6 +40,7 @@ function PlantPage() {
        />
       <PlantList 
       plants={showPlants}
+      handleDelete={handleDeletePlant}
       />
     </main>
   );
